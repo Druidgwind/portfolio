@@ -192,6 +192,7 @@ header.sticky {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 2rem;
+    align-items: center;
 }
 
 .about-img {
@@ -205,6 +206,7 @@ header.sticky {
     font-size: var(--h2-font);
     margin-bottom: 20px;
     letter-spacing: 1px;
+    text-align: justify;
 }
 
 .about-text h5 {
@@ -220,6 +222,7 @@ header.sticky {
     max-width: 590px;
     font-size: var(--p-font);
     margin-bottom: 45px;
+    text-align: justify;
 }
 
 /* .btn {
@@ -274,7 +277,6 @@ header.sticky {
     background: var(--secound-bg-color);
     padding: 55px 30px;
     border-radius: 10px;
-    cursor: pointer;
     transition: all .35s;
 }
 
@@ -496,6 +498,11 @@ input {
 
     .about-img {
         margin-bottom: 30px;
+    }
+
+    .about-text h2,
+    h5 {
+        text-align: center;
     }
 
     .about-img img {
