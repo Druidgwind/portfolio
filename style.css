@@ -528,6 +528,9 @@ input {
         order: 2;
     }
 
+    .contact-form p {
+        text-align: justify;
+    }
 
     .box img {
         max-width: 100%;
