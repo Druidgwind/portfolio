@@ -447,7 +447,13 @@ input {
 
 @media (max-width: 990px) {
     .home {
-        height: 85vh;
+        height: 100vh;
+    }
+
+    .home h4,
+    h1,
+    h3 {
+        padding-top: 60px;
     }
 
     #menu-icon {
