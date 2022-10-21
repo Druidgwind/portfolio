@@ -191,14 +191,12 @@ header.sticky {
     background: var(--secound-bg-color);
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    align-items: center;
     grid-gap: 2rem;
-    text-align: center;
 }
 
 .about-img {
     max-width: 100%;
-    width: 500px;
+    width: flex;
     height: auto;
     border-radius: 10px;
 }
@@ -206,7 +204,6 @@ header.sticky {
 .about-text h2 {
     font-size: var(--h2-font);
     margin-bottom: 20px;
-    text-align: center;
     letter-spacing: 1px;
 }
 
@@ -214,7 +211,6 @@ header.sticky {
     font-size: 28px;
     margin-bottom: 25px;
     letter-spacing: 1px;
-    text-align: center;
 }
 
 .about-text p {
@@ -224,7 +220,6 @@ header.sticky {
     max-width: 590px;
     font-size: var(--p-font);
     margin-bottom: 45px;
-    text-align: center;
 }
 
 /* .btn {
