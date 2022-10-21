@@ -14,7 +14,7 @@
     --secound-bg-color: #191919;
     --text-color: #fff;
     --secound-color: #c6c9d8bf;
-    --main-color: #f9004d;
+    --main-color: #cf0303;
     --big-font: 5.3rem;
     --h2-font: 4.2rem;
     --p-font: 1.1rem;
@@ -206,12 +206,15 @@ header.sticky {
 .about-text h2 {
     font-size: var(--h2-font);
     margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .about-text h5 {
     font-size: 28px;
     margin-bottom: 25px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .about-text p {
@@ -221,7 +224,7 @@ header.sticky {
     max-width: 590px;
     font-size: var(--p-font);
     margin-bottom: 45px;
-    text-align: justify;
+    text-align: center;
 }
 
 /* .btn {
@@ -491,7 +494,6 @@ input {
     }
 
     .about-img {
-        text-align: center;
         margin-bottom: 30px;
     }
 
@@ -513,6 +515,7 @@ input {
     .contact-form {
         order: 2;
     }
+
 
     .box img {
         max-width: 100%;
