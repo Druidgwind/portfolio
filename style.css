@@ -116,7 +116,7 @@ section {
 .home {
     height: 100vh;
     width: 100%;
-    background: url(./img/novobgcolort.jpg);
+    background: url(./img/novobg.png);
     background-size: cover;
     background-position: center;
     position: relative;
