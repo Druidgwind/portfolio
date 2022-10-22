@@ -11,14 +11,18 @@
 
 :root {
     --bg-color: #070707;
-    --secound-bg-color: #232323;
+    --second-bg-color: #232323;
     --text-color: #fff;
-    --secound-color: #c6c9d8bf;
+    --second-color: #c6c9d8bf;
     --main-color: #cf0303;
     --big-font: 5.3rem;
     --h2-font: 4.2rem;
     --p-font: 1.1rem;
 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,6 +44,33 @@ header {
     transition-duration: .3s;
 
 }
+
+.scroll-up-btn {
+    position: fixed;
+    width: 42px;
+    height: 45px;
+    right: 30px;
+    bottom: 15px;
+    text-align: center;
+    color: var(--text-color);
+    background: var(--main-color);
+    line-height: 50px;
+    border-radius: 6px;
+    font-size: 30px;
+    z-index: 9999;
+    padding-top: 4px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
 
 .logo {
     color: var(--text-color);
@@ -73,7 +104,7 @@ header {
     background: var(--main-color);
     left: 0;
     bottom: -4px;
-    transition: ease .40s;
+    transition: ease .25s;
 }
 
 .navbar a:hover::after {
@@ -188,7 +219,7 @@ header.sticky {
 }
 
 .about {
-    background: var(--secound-bg-color);
+    background: var(--second-bg-color);
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 2rem;
@@ -216,7 +247,7 @@ header.sticky {
 }
 
 .about-text p {
-    color: var(--secound-color);
+    color: var(--second-color);
     letter-spacing: 1px;
     line-height: 28px;
     max-width: 590px;
@@ -258,7 +289,7 @@ header.sticky {
 }
 
 .center p {
-    color: var(--secound-color);
+    color: var(--second-color);
     letter-spacing: 1px;
     line-height: 28px;
     font-size: var(--p-font);
@@ -274,7 +305,7 @@ header.sticky {
 }
 
 .row {
-    background: var(--secound-bg-color);
+    background: var(--second-bg-color);
     padding: 55px 30px;
     border-radius: 10px;
     transition: all .35s;
@@ -294,7 +325,7 @@ header.sticky {
 }
 
 .row p {
-    color: var(--secound-color);
+    color: var(--second-color);
     line-height: 30px;
     font-size: var(--p-font);
 }
@@ -304,7 +335,7 @@ header.sticky {
 }
 
 .portifolio {
-    background: var(--secound-bg-color);
+    background: var(--second-bg-color);
 }
 
 .portifolio-content {
@@ -326,7 +357,7 @@ header.sticky {
 }
 
 .box p {
-    color: var(--secound-color);
+    color: var(--second-color);
     font-size: var(--p-font);
     margin-bottom: 15px;
     text-align: center;
@@ -366,7 +397,7 @@ header.sticky {
 }
 
 .contact-form p {
-    color: var(--secound-color);
+    color: var(--second-color);
     line-height: 28px;
     font-size: var(--p-font);
     letter-spacing: 1px;
@@ -384,7 +415,7 @@ input {
     padding: 20px;
     border: none;
     outline: none;
-    background: var(--secound-bg-color);
+    background: var(--second-bg-color);
     color: var(--text-color);
     font-size: 1rem;
     margin-bottom: 0.5rem;
@@ -407,6 +438,7 @@ input {
     transition: ease .35s;
     text-transform: uppercase;
     margin-top: 20px;
+    text-align: center;
 }
 
 .contact-formcss .send:hover {
@@ -416,12 +448,12 @@ input {
 
 .footer {
     text-align: center;
-    background: var(--secound-bg-color);
+    background: var(--second-bg-color);
     padding: 34px;
 }
 
 .footer p {
-    color: var(--secound-color);
+    color: var(--second-color);
     font-size: 17px;
     letter-spacing: 1px;
 }
