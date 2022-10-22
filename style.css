@@ -488,12 +488,6 @@ input {
         height: 100vh;
     }
 
-    .home h4,
-    h1,
-    h3 {
-        padding-top: 60px;
-    }
-
     #menu-icon {
         display: initial;
     }
