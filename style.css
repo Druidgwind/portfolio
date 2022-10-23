@@ -378,18 +378,17 @@ header.sticky {
 
 .contact {
     background: var(--bg-color);
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    display: flex;
     align-items: center;
     grid-gap: 3rem;
 }
 
-.contact img {
+/* .contact img {
     max-width: 100%;
     width: 700px;
     height: auto;
     border-radius: 10px;
-}
+} */
 
 .contact-form h2 {
     font-size: var(--h2-font);
@@ -407,7 +406,7 @@ header.sticky {
 }
 
 .contact-formcss form {
-    position: relative;
+    position: center;
 }
 
 .contact-formcss textarea,
@@ -521,6 +520,18 @@ input {
 
     .navbar.active {
         top: 100%;
+    }
+
+    .home-text h1 {
+        font-size: 3.6rem;
+    }
+
+    .home-text h4 {
+        font-size: 17px;
+    }
+
+    .home-text h3 {
+        font-size: 22px;
     }
 
     .about {
