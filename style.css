@@ -240,6 +240,9 @@ span {
 /* Formação */
 .formacao {
     background: var(--bg-color);
+    text-align: center;
+    align-items: center;
+    display: grid;
 }
 
 .center {
@@ -260,7 +263,7 @@ span {
 
 .formacao-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(370px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-gap: 2rem;
     align-items: center;
     margin-top: 4.5rem;
@@ -304,6 +307,7 @@ span {
     align-items: center;
     margin-top: 4.5rem;
     cursor: pointer;
+    max-width: 100%;
 }
 
 .box img {
@@ -389,7 +393,7 @@ span {
     }
 
     section {
-        padding: 80px 4%;
+        padding: 100px 4%;
         transition: .2s;
     }
 
@@ -404,7 +408,7 @@ span {
 
 
 /* Para Celulares */
-@media (max-width: 800px) {
+@media (max-width: 980px) {
     .home {
         height: 100vh;
     }
