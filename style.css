@@ -151,7 +151,6 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -231,22 +230,24 @@ header.sticky {
 
 .about-img {
     max-width: 100%;
-    width: flex;
     height: auto;
     border-radius: 10px;
+    position: relative;
+    display: grid;
 }
 
 .about-text h2 {
     font-size: var(--h2-font);
     margin-bottom: 20px;
     letter-spacing: 1px;
-    text-align: justify;
+    text-align: center;
 }
 
 .about-text h5 {
     font-size: 28px;
     margin-bottom: 25px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .about-text p {
@@ -256,7 +257,7 @@ header.sticky {
     max-width: 590px;
     font-size: var(--p-font);
     margin-bottom: 45px;
-    text-align: justify;
+    text-align: center;
 }
 
 /* .btn {
@@ -380,9 +381,9 @@ header.sticky {
 
 .contact {
     background: var(--bg-color);
-    display: flex;
+    display: grid;
     align-items: center;
-    grid-gap: 3rem;
+    text-align: center;
 }
 
 /* .contact img {
@@ -404,10 +405,10 @@ header.sticky {
     font-size: var(--p-font);
     letter-spacing: 1px;
     margin-bottom: 4.1rem;
-    text-align: justify;
+    text-align: center;
 }
 
-.contact-formcss form {
+/* .contact-formcss form {
     position: center;
 }
 
@@ -446,7 +447,7 @@ input {
 .contact-formcss .send:hover {
     transform: translateY(-8px);
     cursor: pointer;
-}
+} */
 
 .footer {
     text-align: center;
@@ -555,26 +556,26 @@ input {
         height: auto;
     }
 
-    .contact {
+    /* .contact {
         grid-template-columns: 1fr;
-    }
+    } */
 
-    .contact-img {
+    /* .contact-img {
         text-align: center;
         margin-bottom: 25px;
-    }
-
+    } */
+    /* 
     .contact-form {
         order: 2;
-    }
+    } */
 
     .contact-form p {
         text-align: justify;
     }
 
-    .box img {
+    /* .box img {
         max-width: 100%;
         width: 760px;
         height: auto;
-    }
+    } */
 }
