@@ -17,7 +17,7 @@
     --second-color: #c6c9d8bf;
     --main-color: #cf0303;
     --big-font: 5.3rem;
-    --h2-font: 3rem;
+    --h2-font: 2.5rem;
     --p-font: 1.5rem;
 
 }
@@ -153,7 +153,7 @@ header {
     display: block;
     width: fit-content;
     position: relative;
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 55px;
     letter-spacing: 2px;
 }
@@ -191,6 +191,7 @@ header {
     margin-top: 30px;
     transition: .3s ease background-color;
     transition-property: background-color, color;
+    font-weight: 500;
 }
 
 #home .cta:hover {
@@ -206,8 +207,14 @@ header {
     color: #fff;
 }
 
+#about .section-title {}
+
+#about .about-bottom {
+    padding-top: 20px;
+}
+
 #about .about {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -215,7 +222,9 @@ header {
 }
 
 
-#about .col-left {}
+#about .col-left {
+    width: 100%;
+}
 
 #about .col-right {
     width: 100%;
@@ -245,6 +254,10 @@ header {
 
 
 #graduation .graduation-top {
+    text-align: center;
+}
+
+#graduation .section-title {
     text-align: center;
 }
 
@@ -419,6 +432,7 @@ header {
     margin-bottom: 50px;
     font-size: var(--big-font);
 }
+
 #contact .icon {
     font-size: 60px;
     margin: 0 auto;
@@ -506,6 +520,7 @@ header {
 #footer .social-icon {
     display: flex;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 #footer .social-item {
@@ -525,7 +540,8 @@ header {
 
 #footer p {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    text-align: center;
 }
 
 
