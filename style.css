@@ -13,14 +13,22 @@
 :root {
     --bg-color: #070707;
     --second-bg-color: #101010;
-    --third-bg-color: #232323;
+    --third-bg-color: #212121;
     --text-color: #fff;
     --second-color: #c6c9d8bf;
     --main-color: #cf0303;
-    --big-font: 4.3rem;
-    --h2-font: 2rem;
-    --p-font: 1.2rem;
+    --big-font: 3.3rem;
+    --h2-font: 1.2rem;
+    --p-font: 1rem;
+    --h3-font: 1.1rem;
 
+}
+
+section,
+footer {
+    overflow: hidden;
+    white-space: wrap;
+    word-break: break-word;
 }
 
 html {
@@ -49,7 +57,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: var(--h3-font);
     font-weight: 400;
 }
 
@@ -59,10 +67,10 @@ span {
 
 p {
     font-size: var(--p-font);
-    margin-top: 15px;
-    line-height: 1.6rem;
+    margin-top: 10px;
+    line-height: 1.5rem;
     font-weight: 300px;
-    letter-spacing: .05rem;
+
 }
 
 
@@ -70,7 +78,7 @@ p {
     font-size: var(--big-font);
     font-weight: 600;
     color: var(--text-color);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     letter-spacing: .2rem;
     text-align: center;
 }
@@ -152,7 +160,7 @@ header,
     display: block;
     width: fit-content;
     position: relative;
-    margin: 20px 10px 20px;
+    margin: 20px 0px 20px;
     font-size: var(--big-font);
 }
 
@@ -244,15 +252,6 @@ header,
     width: 100%;
 }
 
-#about .col-right h2 {
-    font-weight: 500;
-    letter-spacing: .2rem;
-    margin-bottom: 10px;
-}
-
-#about .col-right p {
-    margin-bottom: 20px;
-}
 
 #about .col-left .about-img {
     position: relative;
@@ -276,9 +275,6 @@ header,
 
 #graduation .section-title {
     text-align: center;
-    margin-bottom: 10px;
-    letter-spacing: .2rem;
-    padding: 20px;
 }
 
 #graduation .graduation {
@@ -286,7 +282,7 @@ header,
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 0px;
+    padding: 100px 10px;
 }
 
 
@@ -295,20 +291,19 @@ header,
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 #graduation .graduation-item {
-    flex-basis: 80%;
+    flex-basis: 100%;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
+    padding: 10px;
     border-radius: 10px;
     background-color: var(--third-bg-color);
-    margin: 10px 5%;
-    position: relative;
+    margin: 5px 2%;
     z-index: 1;
     overflow: hidden;
     /* animation: fadeIn 3s; */
@@ -327,21 +322,18 @@ header,
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--second-bg-color);
+    background-color: var(--third-bg-color);
     opacity: 1;
     z-index: -1;
 }
 
 #graduation .graduation-item h2 {
-    font-size: 2rem;
     color: var(--text-color);
-    margin-bottom: 10px;
+
 }
 
 #graduation .graduation-item p {
     color: var(--text-color);
-    font-size: 1.4rem;
-    line-height: 1.9rem;
     text-align: center;
 }
 
@@ -362,7 +354,7 @@ header,
 #projects .projects {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px 20px;
     flex-direction: column;
     overflow: hidden;
 }
@@ -383,15 +375,14 @@ header,
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
-    background-color: #fff;
 }
 
 #projects .project-info {
-    padding: 30px;
+    padding: 10px;
     flex-basis: 50%;
     height: 100%;
     display: flex;
@@ -450,11 +441,17 @@ header,
 
 #contact {
     background-color: var(--bg-color);
-    color: #fff;
+    color: #fff;    
     margin: 0 auto;
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+#contact .section-title {
+    margin-bottom: 50px;
+}
 
 #contact .icon {
     font-size: 40px;
@@ -469,21 +466,24 @@ header,
 #contact .contact {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 100px 20px;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #contact .contact-items {
-    width: 400px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #contact .contact-item {
-    background-color: var(--second-bg-color);
-    width: 80%;
-    padding: 20px;
+    background-color: var(--third-bg-color);
+    padding: 30px;
     text-align: center;
     border-radius: 10px;
-    padding: 30px;
-    margin: 30px;
+    padding: 20px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -494,18 +494,6 @@ header,
 
 #contact .contact-item:hover {
     box-shadow: 0px 0px 5px 0 var(--text-color);
-}
-
-#contact .contact-info h1 {
-    margin-bottom: 5px;
-    font-size: var(--h2-font);
-    font-weight: 500;
-}
-
-#contact .contact-info h2 {
-    line-height: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
 }
 
 
@@ -534,7 +522,7 @@ header,
 }
 
 #footer h2 {
-    font-size: 1rem;
+
     font-weight: 500;
     letter-spacing: .1rem;
     margin-top: 5px;
@@ -548,7 +536,7 @@ header,
 
 #footer .social-item {
     margin: 0 15px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #footer .social-item ion-icon {
@@ -561,9 +549,7 @@ header,
 
 #footer p {
     color: white;
-    font-size: 1rem;
     text-align: center;
-    line-height: 1.2rem;
 }
 
 
@@ -572,6 +558,13 @@ header,
     .cta {
         font-size: 2.5rem;
         padding: 20px 60px;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+    p {
+        font-size: 1.6rem;
     }
 
     h1.section-title {
