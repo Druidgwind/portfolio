@@ -12,13 +12,14 @@
 
 :root {
     --bg-color: #070707;
-    --second-bg-color: #232323;
+    --second-bg-color: #101010;
+    --third-bg-color: #232323;
     --text-color: #fff;
     --second-color: #c6c9d8bf;
     --main-color: #cf0303;
     --big-font: 4.3rem;
     --h2-font: 2rem;
-    --p-font: 1.5rem;
+    --p-font: 1.2rem;
 
 }
 
@@ -47,10 +48,19 @@ h2 {
     font-weight: 400;
 }
 
+h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+span {
+    color: #cf0303;
+}
+
 p {
     font-size: var(--p-font);
-    margin-top: 5px;
-    line-height: 2.5rem;
+    margin-top: 15px;
+    line-height: 1.6rem;
     font-weight: 300px;
     letter-spacing: .05rem;
 }
@@ -85,20 +95,23 @@ p {
 
 /* No Select */
 .home,
-header {
+header,
+.about,
+.graduation,
+.projects,
+.contact .section-title,
+.footer {
     -webkit-touch-callout: none;
-    /* iOS Safari */
+
     -webkit-user-select: none;
-    /* Safari */
+
     -khtml-user-select: none;
-    /* Konqueror HTML */
+
     -moz-user-select: none;
-    /* Old versions of Firefox */
+
     -ms-user-select: none;
-    /* Internet Explorer/Edge */
+
     user-select: none;
-    /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 
@@ -110,7 +123,6 @@ header {
     background-size: cover;
     background-position: center;
     position: relative;
-    justify-content: center;
     z-index: 1;
     color: var(--text-color);
     background-color: #070707;
@@ -140,13 +152,14 @@ header {
     display: block;
     width: fit-content;
     position: relative;
-    margin: 20px 0px 20px;
+    margin: 20px 10px 20px;
     font-size: var(--big-font);
 }
 
 #home h2 {
     font-size: var(--h2-font);
     color: var(--text-color);
+    width: fit-content;
 }
 
 #home h3 {
@@ -154,7 +167,7 @@ header {
     width: fit-content;
     position: relative;
     font-size: 20px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     letter-spacing: 2px;
 }
 
@@ -181,7 +194,6 @@ header {
 #home .cta {
     display: inline-block;
     padding: 15px 30px;
-    align-items: center;
     color: var(--text-color);
     background-color: transparent;
     border: 2px solid var(--main-color);
@@ -191,7 +203,8 @@ header {
     margin-top: 30px;
     transition: .3s ease background-color;
     transition-property: background-color, color;
-    font-weight: 500;
+    font-weight: 800;
+    padding-top: 18px;
 }
 
 #home .cta:hover {
@@ -260,8 +273,12 @@ header {
     flex-direction: column;
 }
 
+
 #graduation .section-title {
     text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    padding: 20px;
 }
 
 #graduation .graduation {
@@ -269,7 +286,7 @@ header {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 100px 0px;
 }
 
 
@@ -279,7 +296,6 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
-    text-align: center;
 }
 
 #graduation .graduation-item {
@@ -290,7 +306,7 @@ header {
     flex-direction: column;
     padding: 30px;
     border-radius: 10px;
-    background-color: var(--second-bg-color);
+    background-color: var(--third-bg-color);
     margin: 10px 5%;
     position: relative;
     z-index: 1;
@@ -339,9 +355,9 @@ header {
     display: flex;
 }
 
-#project .section-title {
+/* #project .section-title {
     width: fit-content;
-}
+} */
 
 #projects .projects {
     max-width: 1200px;
@@ -352,7 +368,6 @@ header {
 }
 
 #projects .projects-header h1 {
-    font-size: var(--big-font);
     margin-bottom: 50px;
 }
 
@@ -383,7 +398,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--bg-color);
+    background: linear-gradient(180deg, #202020 10%, var(--third-bg-color) 100%);
     text-align: justify;
 }
 
@@ -436,13 +451,10 @@ header {
 #contact {
     background-color: var(--bg-color);
     color: #fff;
+    margin: 0 auto;
+    flex-direction: column;
 }
 
-#contact .section-title {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: var(--big-font);
-}
 
 #contact .icon {
     font-size: 40px;
@@ -476,7 +488,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0px 0px 18px 0 var(--second-bg-color);
+    box-shadow: 0px 0px 18px 0 var(--third-bg-color);
     transition: .3s ease box-shadow;
 }
 
@@ -502,6 +514,7 @@ header {
 #footer {
     background-color: var(--second-bg-color);
     color: var(--text-color);
+    display: flex;
 }
 
 #footer .footer {
@@ -525,25 +538,25 @@ header {
     font-weight: 500;
     letter-spacing: .1rem;
     margin-top: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #footer .social-icon {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 #footer .social-item {
-    margin: 0 5px;
+    margin: 0 15px;
     font-size: 2rem;
 }
 
 #footer .social-item ion-icon {
-    transition: .3 ease box-shadow;
+    transition: .3 ease transform;
 }
 
 #footer .social-item:hover ion-icon {
-    box-shadow: 0px 0px 5px 0 var(--bg-color);
+    transform: scale(1.1);
 }
 
 #footer p {
@@ -554,6 +567,51 @@ header {
 }
 
 
+/* Media para tablet */
+@media only screen and (min-width:768px) {
+    .cta {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+
+    h1.section-title {
+        font-size: 6rem;
+    }
+
+    /* Home */
+    #home h1 {
+        font-size: 7rem;
+    }
+
+
+    /*Formação*/
+
+    #graduation .graduation-bottom .graduation-item {
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+
+    /*Projetos*/
+    #projects .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #projects .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #projects .all-projects .project-info {
+        height: 100%;
+    }
+
+    #projects .all-projects .project-img {
+        height: 100%;
+    }
+}
 
 
 
