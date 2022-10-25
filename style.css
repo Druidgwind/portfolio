@@ -152,15 +152,16 @@ header,
 #home .home {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 20px;
     justify-content: flex-start;
+    text-align: justify;
 }
 
 #home h1 {
     display: block;
     width: fit-content;
     position: relative;
-    margin: 20px 10px 20px;
+    margin: 10px 0px 10px;
     font-size: var(--big-font);
 }
 
@@ -168,6 +169,8 @@ header,
     font-size: var(--h2-font);
     color: var(--text-color);
     width: fit-content;
+    display: block;
+    position: relative;
 }
 
 #home h3 {
@@ -175,7 +178,7 @@ header,
     width: fit-content;
     position: relative;
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
@@ -201,18 +204,18 @@ header,
 
 #home .cta {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 20px;
     color: var(--text-color);
     background-color: transparent;
     border: 2px solid var(--main-color);
     font-size: var(--h1-font);
     text-transform: uppercase;
     letter-spacing: .1rem;
-    margin-top: 30px;
+    margin-top: 120px;
     transition: .3s ease background-color;
     transition-property: background-color, color;
     font-weight: 800;
-    padding-top: 18px;
+
 }
 
 #home .cta:hover {
