@@ -7,7 +7,6 @@
     /* list-style: none; */
     text-decoration: none;
     scroll-behavior: smooth;
-    /* scroll-padding-top: 3.5rem; */
 }
 
 :root {
@@ -17,11 +16,10 @@
     --text-color: #fff;
     --second-color: #c6c9d8bf;
     --main-color: #cf0303;
-    --big-font: 3.3rem;
-    --h2-font: 1.2rem;
+    --big-font: 3rem;
+    --h2-font: 1.5rem;
+    --h3-font: 1.2rem;
     --p-font: 1rem;
-    --h3-font: 1.1rem;
-
 }
 
 section,
@@ -49,23 +47,23 @@ html {
 h2 {
     font-size: var(--h2-font);
     font-weight: 400;
-    margin-bottom: 15px;
+    line-height: 2rem;
 }
 
 h3 {
     font-size: var(--h3-font);
     font-weight: 400;
-}
-
-span {
-    color: #cf0303;
+    line-height: 1.5rem;
 }
 
 p {
     font-size: var(--p-font);
     line-height: 1.5rem;
     font-weight: 300px;
+}
 
+span {
+    color: #cf0303;
 }
 
 
@@ -73,7 +71,6 @@ p {
     font-size: var(--big-font);
     font-weight: 600;
     color: var(--text-color);
-    letter-spacing: .1rem;
     text-align: center;
 }
 
@@ -107,7 +104,7 @@ header,
 .graduation,
 .projects,
 .contact .section-title,
-.footer {
+.footer, h2, h1 {
     -webkit-touch-callout: none;
 
     -webkit-user-select: none;
@@ -164,41 +161,17 @@ header,
     width: fit-content;
     position: relative;
     margin: 10px 0px;
-    font-size: var(--big-font);
+    font-size: 3.5rem;
 }
-
-/* #home h2 {
-    font-size: var(--h2-font);
-    color: var(--text-color);
-    width: fit-content;
-    display: block;
-    position: relative;
-    letter-spacing: 1px;
-} */
 
 #home h3 {
     display: block;
     width: fit-content;
     position: relative;
     font-size: 20px;
-    margin-bottom: 5px;
     letter-spacing: 1px;
+
 }
-
-/* #home h4 {
-    display: block;
-    width: fit-content;
-    position: relative;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #585c63;
-} */
-
-#home h1 span {
-    color: var(--main-color);
-}
-
-
 
 #home span {
     color: var(--main-color);
@@ -214,7 +187,7 @@ header,
     font-size: var(--h1-font);
     text-transform: uppercase;
     letter-spacing: .1rem;
-    margin-top: 120px;
+    margin-top: 50px;
     transition: .3s ease background-color;
     transition-property: background-color, color;
     font-weight: 800;
@@ -242,7 +215,7 @@ header,
 
 #about .about-bottom {
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     text-align: justify;
 }
 
@@ -251,7 +224,7 @@ header,
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 50px 15px;
 }
 
 
@@ -291,9 +264,7 @@ header,
 #graduation {
     background-color: var(--bg-color);
     color: var(--text-color);
-
 }
-
 
 #graduation .graduation-top {
     text-align: center;
@@ -311,7 +282,7 @@ header,
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 50px 10px;
 }
 
 
@@ -320,24 +291,25 @@ header,
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #graduation .graduation-item {
     flex-basis: 100%;
+    width: 100%;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px 0px;
+    border-radius: 5px;
     background-color: var(--third-bg-color);
-    margin: 4px 2%;
+    margin: 5px 1%;
     z-index: 1;
     position: relative;
     overflow: hidden;
     /* animation: fadeIn 3s; */
-    box-shadow: 0px 0px 18px 0 var(--second-bg-color);
+    box-shadow: 0px 0px 0px 5px var(--second-bg-color);
     transition: .3s ease box-shadow;
 }
 
@@ -363,6 +335,7 @@ header,
 }
 
 #graduation .graduation-item p {
+    padding-top: 10px;
     color: var(--text-color);
     text-align: center;
 }
@@ -371,7 +344,7 @@ header,
 
 
 
-/* Inicio Portifólio */
+/* Inicio Portfólio */
 
 
 #projects {
@@ -379,13 +352,11 @@ header,
     color: var(--text-color);
 }
 
-
 #projects .projects {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 50px 10px;
     flex-direction: column;
-    overflow: hidden;
     text-align: center;
 }
 
@@ -395,6 +366,9 @@ header,
     justify-content: center;
     flex-direction: column;
     margin-top: 10px;
+    margin-bottom: 10px;
+
+
 }
 
 #projects .project-item {
@@ -403,13 +377,12 @@ header,
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
 }
 
 #projects .project-info {
-    padding: 3%;
+    padding: 4%;
     flex-basis: 50%;
     height: 100%;
     display: flex;
@@ -439,16 +412,14 @@ header,
     text-align: center;
 }
 
-#projects .project-info p {
-    color: var(--text-color);
-    font-size: var(--p-font);
-}
 
 #projects .project-img {
     flex-basis: 50%;
-    height: 300px;
+    width: 100%;
     overflow: hidden;
     position: relative;
+    background-color: var(--third-bg-color);
+
 }
 
 #projects .project-img::after {
@@ -470,7 +441,7 @@ header,
     transform: scale(1.1);
 }
 
-/* Termino Portifólio */
+/* Termino Portfólio */
 
 
 
@@ -484,11 +455,12 @@ header,
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     text-align: center;
 }
 
-
+#contact .section-title {
+    margin-right: 10px;
+}
 #contact .icon {
     font-size: 40px;
     margin: 0 auto;
@@ -498,24 +470,23 @@ header,
 #contact .contact {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 50px 0px;
     flex-direction: column;
-    overflow: hidden;
+    margin-left: 10px;
+    /* overflow: hidden; */
 }
 
-#contact .contact-items {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
+/* #contact .contact-items {
+    width: 100%;
+} */
 
 #contact .contact-item {
     background-color: var(--third-bg-color);
-    padding: 10px;
+    width: 80%;
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
-    margin: 5px 0 10px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -527,16 +498,14 @@ header,
 
 #contact .contact-item h2 {
     font-weight: 600;
-    margin-bottom: 10px;
 }
 
 #contact .contact-item:hover {
     box-shadow: 0px 0px 5px 0 var(--text-color);
 }
 
-#contact .social-media {
-    margin: 0 auto;
-    padding: 15px 0px;
+/* #contact .social-media {
+    margin-top: 40px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -547,13 +516,12 @@ header,
 
 
 #contact .social-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: flex;
-
 }
 
 #contact .social-item {
-    padding: 5px 10px;
+    padding: 30px 10px;
     justify-content: center;
 }
 
@@ -563,13 +531,13 @@ header,
 
 #contact .social-item:hover ion-icon {
     transform: scale(1.1);
-}
+} */
 
 /*Termino Contato*/
 
 
 
-/*Início Foooter */
+/*Início Footer */
 
 #footer {
     background-color: var(--third-bg-color);
@@ -578,22 +546,23 @@ header,
 }
 
 #footer .footer {
-    min-height: 80px;
+    min-height: 100px;
     flex-direction: column;
-    padding-top: 30px;
-    padding-bottom: 5px;
+    padding: 10px;
 
 }
 
 #footer h2 {
     font-weight: 800;
     font-size: 1.8rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #footer p {
     font-size: .8rem;
     text-align: center;
-    margin-bottom: 5px;
+    line-height: 1rem;
 }
 
 /* Termino Footer */
@@ -603,46 +572,124 @@ header,
 
 /* Media para tablet */
 @media only screen and (min-width:768px) {
-    .cta {
-        font-size: 2.5rem;
-        padding: 20px 60px;
-    }
 
+    h1 {
+        font-size: 6rem;
+    }
     h2 {
-        font-size: 2.6rem;
+        font-size: 2.75rem;
     }
 
     p {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
     }
 
-    h1.section-title {
-        font-size: 6rem;
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.5rem;
     }
+
 
     /* Home */
     #home h1 {
-        font-size: 7rem;
+        font-size: 5.25rem;
     }
 
+    #home h3 {
+        font-size: 2.5rem;
+    }
 
+    #home .cta {
+        font-size: 1.5rem;
+        padding-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 4.5rem;
+        font-weight: 600;
+        color: var(--text-color);
+        text-align: center;
+    }
+
+    /* About */
+    #about {
+        padding: 0px 40px;
+    }
+
+    #about .about{
+        flex-direction: row-reverse;
+    }
+
+    #about .col-right {
+        padding-left: 40px;
+    }
+    
+    /* #about.col-left {
+        width: 600px;
+        height: 400px;
+    } */
+
+    #about .about-bottom {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        text-align: justify;
+    }
+
+    
     /*Formação*/
 
     #graduation .graduation-bottom .graduation-item {
         flex-basis: 45%;
-        margin: 1.5%;
+        margin: 1.5%; 
+        width: 100%;  
+        height: 200px;
+        padding: 50px 0;
+        align-items: center;
+        justify-content: center;
     }
 
-    /*Projetos*/
+    #graduation h2 {
+        line-height: 50px;
+    }
+    
 
+    
+    /*Portfolio*/
+    #projects .all-projects{
+        margin-top: 20px;
+        padding: 2px 2px;
+    }
+
+    #project .projects {
+        padding: 50px 0px;
+    }
+
+    #projects h3 { 
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    }
+    
+    #projects .project-info h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    #projects p {
+        font-size: 1.3rem;
+        /* line-height: 1.8rem; */
+    }
     #projects .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
-
+    
     #projects .project-item {
         flex-direction: row;
-        height: 300px;
-        margin: 0;
+        height: 350px;
+        margin: 0 auto;
         width: 100%;
         border-radius: 0;
     }
@@ -654,4 +701,41 @@ header,
     #projects .all-projects .project-img {
         height: 100%;
     }
+
+    /* Contato */
+
+
+    #contact .contact {
+        flex-direction: column;
+        padding: 50px 0px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #contact .contact-items {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        padding: 0px auto;
+        margin: 10px;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact p {
+        font-size: 1rem;
+    }
+
+    #contact.contact-item {
+        margin: 1px;
+        flex-direction: row;
+    }
+
+
+
+
 }
+
