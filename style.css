@@ -456,6 +456,7 @@ header,
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 }
 
 #contact .section-title {
@@ -468,6 +469,8 @@ header,
 }
 
 #contact .contact {
+    display: flex;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 0px;
@@ -710,15 +713,16 @@ header,
         padding: 50px 0px;
         align-items: center;
         justify-content: center;
+        display: flex;
+        position: relative;
 
     }
 
     #contact .contact-items {
         display: flex;
-        width: 100%;
         flex-direction: row;
         padding: 0px auto;
-        margin: 10px;
+        margin: 0px;
     }
 
     #contact h2 {
