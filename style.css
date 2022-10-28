@@ -352,9 +352,13 @@ h1 {
   flex-direction: column;
   overflow: hidden;
   border-radius: 20px;
-  background-color: #070707;
+  background-color: var(--bg-color);
   margin-bottom: 20px;
-  
+  box-shadow: 0px 0px 0px 5px var(--third-bg-color);
+}
+
+#projects .project-item:first-child {
+  background-color: #121212;
 }
 
 #projects .projects .all-projects .project-info h3 {
@@ -391,11 +395,10 @@ h1 {
   flex-basis: 50%;
   overflow: hidden;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   cursor: pointer;
+  background-color: transparent;
 }
+
 
 /* #projects .project-img::after {
   content: "";
@@ -435,7 +438,6 @@ h1 {
 #contact .icon {
   font-size: 50px;
   margin: 0 auto;
-  margin-bottom: 10px;
 }
 
 #contact .contact {
@@ -452,8 +454,8 @@ h1 {
   background-color: var(--third-bg-color);
   text-align: center;
   border-radius: 10px;
-  margin: 40px;
-  padding: 30px;
+  margin: 30px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -629,13 +631,12 @@ h1 {
   #projects .project-item {
     margin: 0 auto;
     padding: 0 auto;
-
+    box-shadow: none;
   }
 
 
   #projects .all-projects {
     margin-top: 30px;
-    
   }
 
   #projects h3 {
@@ -655,6 +656,11 @@ h1 {
   }
   #projects .project-item:nth-child(even) {
     flex-direction: row-reverse;
+  }
+
+  #projects .project-item .project-img {
+    max-height: 380px;
+    background-color: var(--bg-color);
   }
 
   #projects .project-item {
