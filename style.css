@@ -7,6 +7,8 @@
   /* list-style: none; */
   text-decoration: none;
   scroll-behavior: smooth;
+  font-family: "Josefin Sans", sans-serif;
+  /* border: solid#cf0303; */
 }
 
 :root {
@@ -14,9 +16,8 @@
   --second-bg-color: #101010;
   --third-bg-color: #212121;
   --text-color: #fff;
-  --second-color: #c6c9d8bf;
-  --main-color: #cf0303;
-  --big-font: 3rem;
+  --span-color: #cf0303;
+  --h1-font: 3rem;
   --h2-font: 1.5rem;
   --h3-font: 1.2rem;
   --p-font: 1rem;
@@ -27,19 +28,23 @@ footer {
   overflow: hidden;
   white-space: wrap;
   word-break: break-word;
+  color: var(--text-color);
 }
 
-html {
-  scroll-behavior: smooth;
-  font-family: "Josefin Sans", sans-serif;
-}
-
+/*!----Estrutura do Container---*/
 .container {
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/*!----*/
+
+p {
+  font-size: var(--p-font);
+  line-height: 1.5rem;
+  font-weight: 300px;
 }
 
 h2 {
@@ -54,20 +59,13 @@ h3 {
   line-height: 1.5rem;
 }
 
-p {
-  font-size: var(--p-font);
-  line-height: 1.5rem;
-  font-weight: 300px;
-}
-
 span {
   color: #cf0303;
 }
 
 .section-title {
-  font-size: var(--big-font);
-  font-weight: 600;
-  color: var(--text-color);
+  font-size: var(--h1-font);
+  font-weight: 700;
   text-align: center;
 }
 
@@ -123,8 +121,7 @@ h1 {
   background-position: center;
   position: relative;
   z-index: 1;
-  color: var(--text-color);
-  background-color: #070707;
+  background-color: var(--bg-color);
   /* animation: fadeIn 3s; */
 }
 
@@ -136,7 +133,7 @@ h1 {
   height: 100%;
   width: 100%;
   background-color: var(--bg-color);
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -164,16 +161,12 @@ h1 {
   letter-spacing: 1px;
 }
 
-#home span {
-  color: var(--main-color);
-}
-
 #home .cta {
   display: inline-block;
   padding: 15px 20px;
   color: var(--text-color);
   background-color: transparent;
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--span-color);
   font-size: var(--h1-font);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -186,7 +179,7 @@ h1 {
 
 #home .cta:hover {
   color: var(--text-color);
-  background-color: var(--main-color);
+  background-color: var(--span-color);
 }
 
 /*Termino Pagina Inicial */
@@ -195,7 +188,6 @@ h1 {
 
 #about {
   background-color: var(--second-bg-color);
-  color: #fff;
 }
 
 /* #about .section-title {} */
@@ -263,7 +255,7 @@ h1 {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 0px;
+  padding: 40px 0px;
 }
 
 #graduation .graduation-bottom {
@@ -332,16 +324,13 @@ h1 {
   color: var(--text-color);
 }
 
-#projects .project-info h3 {
-  text-align: left;
-}
-
 #projects .projects {
   max-width: 1200px;
-  padding: 50px 0px;
+  padding: 50px 5%;
   margin: 0 auto;
   flex-direction: column;
   text-align: center;
+  display: flex;
 }
 
 #projects .all-projects {
@@ -357,9 +346,14 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
   overflow: hidden;
   border-radius: 10px;
+  background-color: #070707;
+  margin-bottom: 20px;
+}
+
+#projects .projects .all-projects .project-info h3 {
+  text-align: justify;
 }
 
 #projects .project-info {
@@ -434,9 +428,6 @@ h1 {
   width: 100%; */
 }
 
-#contact .section-title {
-  margin-right: 10px;
-}
 #contact .icon {
   font-size: 40px;
   margin: 0 auto;
@@ -446,26 +437,22 @@ h1 {
 #contact .contact {
   /* display: flex; */
   /* align-items: center; */
-  max-width: 1200px;
   margin: 0 auto;
-  /* padding: 0px 0px; */
+  padding: 50px 0px;
   flex-direction: column;
   /* justify-content: center;
   overflow: hidden; */
 }
 
 #contact .contact-items {
-  width: 300px;
 }
 
 #contact .contact-item {
   background-color: var(--third-bg-color);
-  width: 80%;
-  padding: 20px;
   text-align: center;
   border-radius: 10px;
-  margin: 30px;
-  padding: 30px;
+  margin: 40px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,35 +468,6 @@ h1 {
 #contact .contact-item:hover {
   box-shadow: 0px 0px 5px 0 var(--text-color);
 }
-
-/* #contact .social-media {
-    margin-top: 40px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-}
-
-
-
-#contact .social-icon {
-    font-size: 2.5rem;
-    display: flex;
-}
-
-#contact .social-item {
-    padding: 30px 10px;
-    justify-content: center;
-}
-
-#contact .social-item ion-icon {
-    transition: .3 ease transform;
-}
-
-#contact .social-item:hover ion-icon {
-    transform: scale(1.1);
-} */
 
 /*Termino Contato*/
 
@@ -639,25 +597,33 @@ h1 {
     justify-content: center;
   }
 
-
   #graduation h3 {
-    padding: 10px;
+    padding: 20px;
     font-size: 2rem;
     font-weight: 600;
     color: var(--text-color);
   }
 
   #graduation .graduation-item h3 {
-    line-height: 25px;
+    line-height: 35px;
+  }
+
+  #graduation .graduation-item h2 {
+    line-height: 50px;
   }
 
   /*Portfolio*/
-  #projects .all-projects {
-    margin-top: 30px;
+
+  #projects .projects {
+    max-width: 1200px;
+    padding: 50px 0px;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
   }
 
-  #project .projects {
-    padding: 30px 0px;
+  #projects .all-projects {
+    margin-top: 30px;
   }
 
   #projects h3 {
@@ -682,9 +648,10 @@ h1 {
   #projects .project-item {
     padding-top: 0px;
     flex-direction: row;
-    height: 350px;
-    margin: 0 auto;
     width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px 0px 0;
     border-radius: 0;
   }
 
@@ -705,7 +672,7 @@ h1 {
     align-items: center;
     text-align: center;
     justify-content: center;
-    min-height: 20vh;
+    min-height: 40vh;
     position: relative;
   }
 
@@ -713,7 +680,6 @@ h1 {
     flex-direction: row;
     align-items: center;
     display: flex;
-    width: 100%;
     padding: 0px 0;
     margin: 0;
   }
@@ -734,7 +700,8 @@ h1 {
     flex-direction: column;
     margin: 30px 10px;
     padding: 10px 0px;
-    min-height: 180px;
+    min-height: 250px;
+    min-width: 250px;
   }
 
   #contact .contact-item .icon {
