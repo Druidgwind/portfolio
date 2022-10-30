@@ -8,13 +8,14 @@
   text-decoration: none;
   scroll-behavior: smooth;
   font-family: "Josefin Sans", sans-serif;
-  /* border: solid#cf0303; */
+  /* border: 1px solid#cf0303; */
 }
 
 :root {
   --bg-color: #070707;
   --second-bg-color: #101010;
   --third-bg-color: #212121;
+  --fourth-bg-color: #404040;
   --text-color: #fff;
   --span-color: #cf0303;
   --h1-font: 3rem;
@@ -45,18 +46,21 @@ p {
   font-size: var(--p-font);
   line-height: 1.5rem;
   font-weight: 300px;
+  color: #fff;
 }
 
 h2 {
   font-size: var(--h2-font);
   font-weight: 400;
   line-height: 2rem;
+  color: #fff;
 }
 
 h3 {
   font-size: var(--h3-font);
   font-weight: 400;
   line-height: 1.5rem;
+  color: #fff;
 }
 
 span {
@@ -152,7 +156,7 @@ h1 {
   position: relative;
   margin: 20px 0px;
   padding-right: 200px;
-  font-size: 3.6rem;
+  font-size: 4rem;
   word-break: normal;
   text-align: center;
 }
@@ -259,7 +263,7 @@ h1 {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 0px;
+  padding: 50px 4%;
 }
 
 #graduation .graduation-bottom {
@@ -272,28 +276,56 @@ h1 {
 
 #graduation .graduation-item {
   flex-basis: 100%;
-  width: 100%;
   display: flex;
-  text-align: center;
-  align-items: center;
   flex-direction: column;
-  padding: 15px 15px;
+  padding: 0% 0%;
   border-radius: 5px;
-  background-color: var(--third-bg-color);
-  margin: 5px 3%;
-  z-index: 1;
+  background-color: var(--second-bg-color);
+  margin: 2% 2%;
   position: relative;
   overflow: hidden;
+
   /* animation: fadeIn 3s; */
-  box-shadow: 0px 0px 0px 5px var(--second-bg-color);
-  transition: 0.3s ease box-shadow;
+}
+
+#graduation .graduation-collapsible {
+  background-color: var(--third-bg-color);
+  outline: none;
+  border: none;
+  padding: 2%;
+  padding-bottom: 0%;
+  width: 100%;
+  cursor: pointer;
+}
+
+#graduation .active,
+.graduation-collapsible:hover {
+  background-color: var(--second-bg-color);
+}
+
+#graduation .graduation-collapsible::after {
+  background-color: #070707;
 }
 
 #graduation .graduation-item:hover {
-  box-shadow: 0px 0px 5px 0 var(--text-color);
+  box-shadow: 0px 0px 5px 0px var(--text-color);
 }
 
-#graduation .graduation-item::after {
+#graduation .graduation-content {
+  background-color: var(--fourth-bg-color);
+  padding: 0% 2%;
+  margin: 0% 0%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  justify-content: center;
+}
+
+/* #graduation .graduation-item:hover {
+  background-color: var(--third-bg-color);
+} */
+
+/* #graduation .graduation-item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -303,20 +335,31 @@ h1 {
   background-color: var(--third-bg-color);
   opacity: 1;
   z-index: -1;
-}
+} */
 
 #graduation .graduation-item h2 {
   color: var(--text-color);
+  text-align: left;
+  line-height: 25px;
+  padding-top: 5px;
 }
 
 #graduation .graduation-item h3 {
-  line-height: 25px;
+  padding-top: 10px;
+  text-align: left;
 }
 
-#graduation .graduation-item p {
-  padding-top: 10px;
+#graduation .graduation-item h4 {
+  color: rgb(193, 193, 193);
+  text-align: left;
+  font-weight: 400;
+}
+
+#graduation .graduation-content p {
+  padding-top: 15px;
+  margin-bottom: 15px;
   color: var(--text-color);
-  text-align: center;
+  text-align: justify;
 }
 
 /* Termino Formação */
@@ -375,7 +418,6 @@ h1 {
   text-align: justify;
 }
 
-
 #projects .project-info h2 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -398,7 +440,6 @@ h1 {
   cursor: pointer;
   background-color: transparent;
 }
-
 
 /* #projects .project-img::after {
   content: "";
@@ -469,7 +510,7 @@ h1 {
 }
 
 #contact .contact-item:hover {
-  background-color: var(--second-bg-color);
+  background-color: var(--fourth-bg-color);
   /* box-shadow: 0px 0px 5px 0 var(--text-color); */
 }
 
@@ -527,6 +568,8 @@ h1 {
 }
 
 /* Termino Footer */
+
+/*!TESTE*/
 
 /* Media para tablet */
 @media only screen and (min-width: 768px) {
@@ -595,8 +638,7 @@ h1 {
     flex-basis: 45%;
     margin: 1.5%;
     width: 100%;
-    height: 200px;
-    padding: 40px 0px;
+    height: 250px;
     align-items: center;
     justify-content: center;
   }
@@ -609,11 +651,20 @@ h1 {
   }
 
   #graduation .graduation-item h3 {
-    line-height: 35px;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 
   #graduation .graduation-item h2 {
-    line-height: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+
+    text-align: center;
+  }
+
+  #graduation p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
 
   /*Portfolio*/
@@ -625,15 +676,11 @@ h1 {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    
   }
 
   #projects .project-item {
-    margin: 0 auto;
-    padding: 0 auto;
     box-shadow: none;
   }
-
 
   #projects .all-projects {
     margin-top: 30px;
@@ -654,12 +701,13 @@ h1 {
     font-size: 1.5rem;
     line-height: 1.8rem;
   }
+
   #projects .project-item:nth-child(even) {
     flex-direction: row-reverse;
   }
 
   #projects .project-item .project-img {
-    max-height: 380px;
+    max-height: 360px;
     background-color: var(--bg-color);
   }
 
@@ -677,7 +725,6 @@ h1 {
     align-items: center;
     justify-content: center;
   }
-
 
   /* Contato */
 
@@ -698,7 +745,6 @@ h1 {
     justify-content: center;
     display: flex;
     padding: 0px 0;
-    margin: 20px;
   }
 
   #contact h2 {
@@ -715,7 +761,7 @@ h1 {
 
   #contact .contact-item {
     flex-direction: column;
-    margin: 20px 10px;
+    margin: 40px 30px;
     padding: 10px 0px;
     min-height: 250px;
     min-width: 250px;
@@ -749,5 +795,18 @@ h1 {
 
   #footer .social-icons {
     font-size: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  #home h1 {
+    font-size: 6.5rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    #graduation .graduation-bottom .graduation-item {
+      flex-basis: 30%;
+      margin: 1.5%;
+    }
   }
 }
