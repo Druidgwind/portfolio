@@ -112,7 +112,7 @@ span {
 /* ----- No Select -----*/
 
 .home,
-header,
+.header,
 .about,
 .graduation,
 .projects,
@@ -121,8 +121,8 @@ header,
 h2,
 h1,
 h3,
-h4,
-p {
+h4
+ {
   -webkit-touch-callout: none;
 
   -webkit-user-select: none;
@@ -151,6 +151,9 @@ p {
   height: auto;
 }
 
+#header .logo {
+  margin-left: 10px;
+}
 #header .header {
   min-height: 8vh;
   background-color: rgba(07, 07, 07, 0.068);
@@ -170,7 +173,8 @@ p {
 #header .nav-list ul {
   list-style: none;
   position: absolute;
-  background-color: rgb(31, 30, 30);
+  background-color: rgba(15, 15, 15, 0.2);
+  backdrop-filter: blur(8px);
   width: 100vw;
   height: 100vh;
   left: 100%;
@@ -181,7 +185,7 @@ p {
   align-items: center;
   z-index: 1;
   overflow-x: hidden;
-  transition: 0.5s ease left;
+  transition: 0.6s ease left;
 }
 
 #header .nav-list ul.active {
@@ -200,12 +204,12 @@ p {
 }
 
 #header .nav-list ul a::after {
-  content: attr(data-after);
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  color: rgb(240, 248, 255, 0.021);
+  color: rgb(255, 255, 255, 0.020);
   font-size: 8rem;
   letter-spacing: 50px;
   z-index: -1;
@@ -222,8 +226,8 @@ p {
 }
 
 #header .burger {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   display: inline-block;
   border: 3px solid white;
   border-radius: 50%;
@@ -239,7 +243,7 @@ p {
 
 #header .burger::after {
   position: absolute;
-  content: "";
+  content: " ";
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -249,7 +253,7 @@ p {
 
 #header .burger .bar {
   height: 2px;
-  width: 30px;
+  width: 20px;
   position: relative;
   background-color: #fff;
   z-index: -1;
@@ -257,7 +261,7 @@ p {
 
 #header .burger .bar::after,
 #header .burger .bar::before {
-  content: "";
+  content: " ";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -524,7 +528,7 @@ p {
 }
 
 #graduation .graduation-item h4 {
-  color: rgb(193, 193, 193);
+  color: #fff;
   text-align: left;
   font-weight: 400;
 }
@@ -574,8 +578,13 @@ p {
   box-shadow: 0px 0px 0px 5px var(--third-bg-color);
 }
 
+
 #projects .project-item:first-child {
   background-color: #121212;
+}
+
+#projects .project-item:last-child{
+  background-color: #050505;
 }
 
 #projects .projects .all-projects .project-info h3 {
@@ -588,7 +597,7 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(180deg, #202020 10%, var(--third-bg-color) 100%);
+  background: linear-gradient(90deg, #151515 10%, #202020 100%);
   text-align: justify;
 }
 
@@ -612,7 +621,7 @@ p {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #121212;
 }
 
 /* #projects .project-img::after {
@@ -760,8 +769,10 @@ p {
     font-size: 2.5rem;
   }
 
-  #header .burger {
+  #header .burger .bar {
     display: none;
+    background-color: transparent;
+    color: transparent;
   }
 
   #header .nav-list ul {
