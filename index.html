@@ -14,9 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <style>
-
-
 .graduation-collapsible:after {
   content: '\002B';
   color: white;
@@ -28,10 +27,6 @@
 .active:after {
   content: "\2212";
 }
-
-
-
-
 </style>
 </head>
 
@@ -39,9 +34,25 @@
 <body>
 
     <!---Começa o Header-->
-    <header>
-
-    </header>
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#home"><h1>LFS|<span>DEV</span></h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="burger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="#home" data-after="Início">Início</a></li>
+                        <li><a href="#about" data-after="Sobre">Sobre</a></li>
+                        <li><a href="#graduation" data-after="Educação">Educação</a></li>
+                        <li><a href="#projects" data-after="Portfólio">Portfólio</a></li>
+                        <li><a href="#contact" data-after="Contanto">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!---Início-->
@@ -62,15 +73,14 @@
         <div class="about container">
             <div class="col-right">
                 <h1 class="section-title"><span>S</span>obre</h1>
-                <!-- <h2>Quem <span>S</span>ou</h2> -->
             <div class="about-bottom">
                 <p>Me chamo <span>L</span>ucas Felipe dos Santos, tenho 25 anos e moro em Foz do Iguaçu. Sou concursado
                     como Agente de Combate às Endemias desde 2016 
                     e atualmente faço parte da equipe de Vigilância Entomológica
                     no Centro de Controle de Zoonoses. Através do contato direto com o 
-                    público consegui aprimorar minhas habilidades comunicativas.
-                    <br>
-                    Sou um grande entusiasta de tecnologias e tenho amplo conhecimento em relação à informática e
+                    público consegui aprimorar minhas habilidades comunicativas.</p>
+
+                    <p>Sou um grande entusiasta de tecnologias e tenho amplo conhecimento em relação à informática e
                     hardware. Em 2021 iniciei minha faculdade de Análise e Desenvolvimento de Sistemas
                     e venho aprimorando minhas habilidades gerais na área de programação e design.</p>
             </div>
@@ -93,7 +103,7 @@
                 <h1 class="section-title"><span>E</span>ducação</h1>
             </div>  
             <div class="graduation-bottom">
-                <div class="graduation-item"> 
+                <!-- <div class="graduation-item"> 
                     <button type="button" class="graduation-collapsible">
                         <h4>2012 - 2014</h4>
                         <h2>Ensino Médio</h2>
@@ -103,11 +113,11 @@
                             me destacando como o melhor aluno da turma
                         nos dois últimos anos.</p>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="graduation-item">
                     <button type="button" class="graduation-collapsible">
-                        <h4>2013 - 2016</h4>
+                        <h4>2014 - 2017</h4>
                         <h2>Inglês</h2>
                         <h3>New Wave School</h3></button>
                     <div class="graduation-content">
@@ -190,7 +200,6 @@
         <div class="projects container">
             <div class="projects-header">
                 <h1 class="section-title"><span>P</span>ortfólio</h1>
-                <!-- <h2>Projetos <span>R</span>ecentes</h2> -->
             </div>
             <div class="all-projects">
                 <div class="project-item">
@@ -235,7 +244,6 @@
         <div class="contact container">
             <div>
                 <h1 class="section-title"><span>C</span>ontato</h1>
-                <!-- <h2>Vamos <span>C</span>onversar?</h2> -->
             </div>
             <div class="contact-items">
                 <div class="contact-item">
@@ -304,55 +312,34 @@
 
     <!--Javascript-->
 
-    <!-- <script>
+    <script>
         var coll = document.getElementsByClassName("graduation-collapsible");
         var i;
         
         for (i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                content.style.display = "none";
-                } else {
-                content.style.display = "block";
-                }
-        });
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+            });
         }
-        </script> -->
-
-        <script>
-            var coll = document.getElementsByClassName("graduation-collapsible");
-            var i;
-            
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                } 
-              });
-            }
-            </script>
-
-    <script type="text/javascript" src="./script.js"></script>
+        </script>
+    <script src="./app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script> var typed = new Typed(".type", {
+    <!-- <script> var typed = new Typed(".type", {
             strings: ["Estudante", "Servidor Público", "Web Designer"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
         })
-    </script>
+    </script> -->
 
-    <script>
-        
-    </script>
 </body>
 
 </html>
