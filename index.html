@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LFS | DEV</title>
@@ -350,6 +351,16 @@
             window.getSelection().removeAllRanges();// to deselect
         }
     </script> -->
+
+    <script>
+        const sr = ScrollReveal ({
+            distance: '40px',
+            duration: 2200,
+            reset: true
+        })
+        sr.reveal('.home', {delay:300, origin: 'left', reset:false})
+        sr.reveal('.about, .graduation, .projects, .contact')
+    </script>
 
 </body>
 
